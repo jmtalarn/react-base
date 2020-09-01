@@ -34,6 +34,7 @@ node_modules/
 .history
 .DS_Store
 
+build
 
 # env files
 .env.*.local

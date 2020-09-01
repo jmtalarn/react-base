@@ -42,14 +42,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Enable authentication with Graphql Microservice
-
-In order to test the authentication process on a local environment you should inform the _REACT_APP_GOOGLE_CLIENT_ID_ (both in _".env"_ and _".env.local"_ files) with the _client_id_ that you have previously generated at _https://console.developers.google.com/_ (keep in mind you have generated your own OAuth key with your personal email and not the company's since it's not allowed).
-
-Also, for this process to work you need to enable the authentication configuration from the Graphql Microservice, just by:
-
-* Informing the _client_id_ and _client_secret_ properties (located in _config.json_) that you've obtained from the Google developers console.
-* Enabling the authentication property, by informing the property _security_aouth_enable = true_ (also in _config.json_)
-* Start the service.
-
