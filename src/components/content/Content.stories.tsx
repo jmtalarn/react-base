@@ -3,8 +3,6 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import Content from './Content';
 
-const ass = 'ASS';
-
 export default {
     title: 'Components/Content',
     component: Content,

@@ -4,11 +4,11 @@ module.exports = {
         es6: true,
     },
     extends: [
-        //'eslint:recommended',
+        'eslint:recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/eslint-recommended',
         'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
-        //'plugin:prettier/recommended',
+        'plugin:prettier/recommended',
     ],
     globals: {
         Atomics: 'readonly',

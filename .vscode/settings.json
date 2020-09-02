@@ -4,9 +4,9 @@
         "source.fixAll.eslint": true
     },
     "editor.detectIndentation": false,
-    // "eslint.format.enable": true,
-    // "eslint.lintTask.enable": true,
-    // "eslint.run": "onType",
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "typescript.validate.enable": true,
     "vetur.format.enable": false,
     "prettier.singleQuote": true,
     "vetur.format.defaultFormatter.html": "prettier",
