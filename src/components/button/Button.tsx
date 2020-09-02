@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { StyledProps } from 'styled-components';
 
 export interface ButtonProps {
     /**
@@ -21,7 +21,7 @@ export interface ButtonProps {
     onClick?: () => void;
 }
 
-export interface StyledButtonProps {
+type StyledButtonProps = StyledProps<{
     /**
      * Is this the principal call to action on the page?
      */
@@ -31,19 +31,18 @@ export interface StyledButtonProps {
      * How large should the button be?
      */
     size?: 'small' | 'medium' | 'large';
-    /**
-     * Button contents
-     */
-    children?: string;
+
     /**
      * Optional click handler
      */
     onClick?: () => void;
-}
+}>;
 
 const StyledButton = styled.button<StyledButtonProps>`
     display: inline-block;
-    color: ${({ primary }: StyledButtonProps) => (primary ? 'palevioletred' : 'aliceblue')};
+    color: ${({ primary, theme }: StyledButtonProps) => {
+        return primary ? theme.primaryColor : theme.secondaryColor;
+    }};
     font-size: ${({ size }: StyledButtonProps) => {
         switch (size) {
             case 'small':
@@ -57,7 +56,8 @@ const StyledButton = styled.button<StyledButtonProps>`
     background: none;
     margin: 1em;
     padding: 0.25em 1em;
-    border: 2px solid ${({ primary }: StyledButtonProps) => (primary ? 'palevioletred' : 'aliceblue')};
+    border: 2px solid
+        ${({ primary, theme }: StyledButtonProps) => (primary ? theme.primaryColor : theme.secondaryColor)};
     border-radius: 3px;
 `;
 
